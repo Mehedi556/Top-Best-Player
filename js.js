@@ -30,8 +30,76 @@ palyersArray.push(playersObj)
 
 document.getElementById('total-added-player').innerText = palyersArray.length;
 
-display(palyersArray)
+
+
+
+
+display(palyersArray);
 
 }
 
+document.getElementById('button-calculate').addEventListener('click' , function erase(){
+    const playersNumber = document.getElementById('total-added-player').innerText = palyersArray.length;
+    const playersNumberString = parseFloat(playersNumber);
+
+    const perPlayers = document.getElementById('perPlayerField').value;
+
+    const playerExpenses = perPlayers * playersNumberString;
+   
+    
+    document.getElementById('perPlayerField').value = '';
+    
+document.getElementById('player-expenses').innerText = playerExpenses;
+})
+
+
+
+
+document.getElementById('calculate-total-btn').addEventListener('click' , function cut(){
+    const playersCostString = document.getElementById('player-expenses').innerText;
+    const playersCost = parseFloat(playersCostString);
+   
+
+
+    const managerFieldString = document.getElementById('manager-field').value;
+    const managerField = parseFloat(managerFieldString);
+
+    const coachFieldString = document.getElementById('coach-field').value;
+    const coachField = parseFloat(coachFieldString);
+
+
+    const otherExpensesString = managerField + coachField;
+
+   
+    
+   const totalExpenses = otherExpensesString + playersCost;
+    
+console.log(totalExpenses);
+
+const calculateTotalString = document.getElementById('calculate-total');
+const calculateTotal = calculateTotalString.innerText = totalExpenses;
+
+
+
+document.getElementById('manager-field' , 'coach-field').value = '';
+document.getElementById('coach-field').value = '';
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function disable(x){
+    x.disabled = true;
+}
+    
 

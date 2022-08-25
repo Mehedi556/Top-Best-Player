@@ -33,7 +33,7 @@
                 <div class="card-body">
                     <h2 class="card-title justify-center text-white text-3xl">Nordi Mukiele</h2>
                   <div class="card-actions justify-center">
-                    <button class="btn btn-primary btn-wide font-bold text-lg player" onclick="addToCart(this)">SELECT1</button>
+                    <button id="button" class="btn btn-primary btn-wide font-bold text-lg player" onclick="addToCart(this) , disable(this)">SELECT1</button>
                   </div>
                 </div>
               </div>
@@ -46,7 +46,7 @@
                       <h2 class="card-title justify-center text-white text-3xl">Hugo Ekitike</h2>
                       
                       <div class="card-actions justify-center">
-                        <button class="btn btn-primary btn-wide font-bold text-lg player" onclick="addToCart(this)">SELECT2</button>
+                        <button id = "button" class="btn btn-primary btn-wide font-bold text-lg player" onclick="addToCart(this) , disable(this)">SELECT2</button>
                       </div>
                     </div>
                   </div>
@@ -59,7 +59,7 @@
                       <h2 class="card-title justify-center text-white text-3xl">Lionel Messi</h2>
                       
                       <div class="card-actions justify-center">
-                        <button class="btn btn-primary btn-wide font-bold text-lg player" onclick="addToCart(this)">SELECT3</button>
+                        <button id="button" class="btn btn-primary btn-wide font-bold text-lg player" onclick="addToCart(this) , disable(this)">SELECT3</button>
                       </div>
                     </div>
                   </div>
@@ -120,7 +120,7 @@
                       <h2 class="card-title justify-center text-white text-3xl">Neymar Jr</h2>
                       
                       <div class="card-actions justify-center">
-                        <button class="btn btn-primary btn-wide font-bold text-lg player" onclick="addToCart(this)">SELECT4</button>
+                        <button id="button" class="btn btn-primary btn-wide font-bold text-lg player" onclick="addToCart(this) , disable(this)">SELECT4</button>
                       </div>
                     </div>
                   </div>
@@ -133,7 +133,7 @@
                       <h2 class="card-title justify-center text-white text-3xl">Mauro Icardi</h2>
                       
                       <div class="card-actions justify-center">
-                        <button class="btn btn-primary btn-wide font-bold text-lg player" onclick="addToCart(this)">SELECT5</button>
+                        <button id="button" class="btn btn-primary btn-wide font-bold text-lg player" onclick="addToCart(this) , disable(this)">SELECT5</button>
                       </div>
                     </div>
                   </div>
@@ -146,7 +146,7 @@
                       <h2 class="card-title justify-center text-white text-3xl">Kylian Mbappé</h2>
                       
                       <div class="card-actions justify-center">
-                        <button class="btn btn-primary btn-wide font-bold text-lg player" onclick="addToCart(this)">SELECT6</button>
+                        <button id="button" class="btn btn-primary btn-wide font-bold text-lg player" onclick="addToCart(this) , disable(this)">SELECT6</button>
                       </div>
                     </div>
                   </div>
@@ -165,38 +165,38 @@
                         <div class="form-control mx-auto">
                             <label>
                               <span class="text-white font-bold text-lg">Per player</span>
-                              <input type="text" class="input bg-black border-white w-40" />
+                              <input id="perPlayerField" type="text" class="input bg-black border-white w-40 text-white text-2xl" />
                             </label>
                           </div>
 
                           <div class="card-actions justify-center mb-2">
-                            <button class="btn btn-primary btn-wide font-bold text-lg mt-1">CALCULATE</button>
+                            <button id="button-calculate" onclick="erase()" class="btn btn-primary btn-wide font-bold text-lg mt-1">CALCULATE</button>
                           </div>
 
                           <div class="font-bold text-lg text-white text-center">
-                           <h1 class="inline">Player Expenses </h1><h2 class="inline">$<span>00</span></h2>
+                           <h1 class="inline">Player Expenses </h1><h2 class="inline">$<span id="player-expenses">00</span></h2>
                           </div>
                       
                           <div class="form-control mx-auto">
                             <label>
                               <span class="text-white font-bold text-lg">Manager</span>
-                              <input type="text" class="input bg-black border-white w-40" />
+                              <input id="manager-field" type="text" class="input bg-black border-white w-40 text-white text-2xl" />
                             </label>
                           </div>
 
                           <div class="form-control mx-auto ">
                             <label>
                               <span class="text-white font-bold text-lg">Coach</span>
-                              <input type="text" class="input bg-black border-white w-50" />
+                              <input id="coach-field" type="text" class="input bg-black border-white w-40 text-white text-2xl" />
                             </label>
                           </div>
 
                           <div class="card-actions justify-center mb-1">
-                            <button class="btn btn-primary btn-wide font-bold text-lg mt-1">CALCULATE TOTAL</button>
+                            <button id="calculate-total-btn" class="btn btn-primary btn-wide font-bold text-lg mt-1" onclick="cut()">CALCULATE TOTAL</button>
                           </div>
 
                           <div class="font-bold text-lg text-white text-center">
-                            <h1 class="inline">Total </h1><h2 class="inline">$<span>00</span></h2>
+                            <h1 class="inline">Total </h1><h2 class="inline">$<span id="calculate-total">00</span></h2>
                            </div>
                      
                     </div>
