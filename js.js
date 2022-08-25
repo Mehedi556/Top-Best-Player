@@ -8,12 +8,21 @@ for(let i = 0; i < playersCart.length; i++){
     // console.log(playersCart[i].playerName);
     const name = playersCart[i].playerName;
 
+
 const tr = document.createElement("tr");
 tr.innerHTML = `
 <th>${i + 1}</th>
 <td>${name}</td>
 `;
 tableBody.appendChild(tr);
+
+
+if(tableBody.childNodes.length > 5){
+    alert("only 5 players")
+    break
+}
+
+
 }
 }
 
