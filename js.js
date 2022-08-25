@@ -80,22 +80,9 @@ const calculateTotalString = document.getElementById('calculate-total');
 const calculateTotal = calculateTotalString.innerText = totalExpenses;
 
 
-
 document.getElementById('manager-field' , 'coach-field').value = '';
 document.getElementById('coach-field').value = '';
 })
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 function disable(x){
